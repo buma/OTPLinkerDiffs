@@ -1,13 +1,11 @@
-###State after updating with master (Commit 199cd6ed93fdfc634f59ae1e68e):
+###Added support for Mapbuilder
 
     Correctly linked 530/789 (67%) stations for maribor_clean.osm.gz
     Not checked: 4 stations.
-    Correctly linked 35/50 (70%) stations for portland_small.osm.pbf
-    Not checked: 1175 stations.
-    Correctly linked 4/23 (17%) stations for milan_italy_small.osm.pbf
-    Not checked: 981 stations.
-
-Reason for changes is commit: a6e55fb8e398a2b09f9d83159eeb7b8991425b11 which changes car preferences in CandidateEdge scoring.
+    Correctly linked 39/49 (80%) stations for portland_small.osm.pbf
+    Not checked: 1169 stations.
+    Correctly linked 4/22 (18%) stations for milan_italy_small.osm.pbf
+    Not checked: 979 stations.
 
 Points are transit stops.
 Lines are wanted edges (Edges to which stops should be connected) and current edges (Edges to which stops are connected).
@@ -18,12 +16,11 @@ Same with dark red/dark green and current edges.
 Same edge and stop can appear multiple times most of them appear twice once for each direction.
 
 MARIBOR
-MARPROM:116 has 2 streetLinks now
+No change because Maribor doesn't have shape files.
 
 PORTLAND
-TriMet:12844 is now connected correctly (It wasn't previously)
-TriMet:5027 is now connected only with ine streetLink incorrectly (It was correct before with 2 streetlinks)
+TriMet:1136 and TriMet:1126 are now connected correctly with 2 streetlinks (It weren't previously)
+TriMet:4964 is now incorrectly connected with only one streetLink (It was incorrect before with 2 streetlinks)
 
 MILANO:
-Second AMAT_Milan_feed:11512 StreetLink is now found (it wasn't before)
-One of  AMAT_Milan_feed:11503 StreetLinks now isn't found (it was before)
+One Streetlink on AMAT_Milan_feed:11145 was previously unconnected now it isn't found
